@@ -45,6 +45,7 @@
   cursor: pointer;
   // display: inline-block;
   width:100%;
+	border-circle
 }
 
 .btn:hover {background: orange;}
@@ -54,6 +55,36 @@
 .warning {color: orange;}
 .danger {color: red;}
 .default {color: black;}
+		
+		
+		
+		
+		
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+		
 </style>
 
 </head>
@@ -135,7 +166,7 @@
 	   <!-- <li class="timeline-heading text-center animate-box">
 		<div><h3><a target="_blank" href="https://drive.google.com/drive/folders/14u3ywzWiFJjtl09JLlJUJc8eXEgJIkiZ?usp=sharing">My Resume</a></h3></div>
 	   </li> -->
-	   <a target="_blank" href="https://drive.google.com/drive/folders/14u3ywzWiFJjtl09JLlJUJc8eXEgJIkiZ?usp=sharing" class="btn danger">My Resume</a>
+	   <a target="_blank" href="https://drive.google.com/drive/folders/14u3ywzWiFJjtl09JLlJUJc8eXEgJIkiZ?usp=sharing" class="btn danger"><span>My Resume</span></a>
 
           </div>
 
